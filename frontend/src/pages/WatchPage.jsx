@@ -18,8 +18,7 @@ const WatchPage = () => {
             
 			try {
 				const res = await axios.get(`/api/v1/searchbyid/${id}`)
-				setTrailers(res.data.content);
-                
+				setTrailers(res.data.content);    
 			} catch (error) {
                 console.log(error.message)
 			}
@@ -27,7 +26,6 @@ const WatchPage = () => {
 
 		getTrailers();
 	}, [contentType, id]);
-        console.log(trailers)
 
 	return (
 		<div className='bg-black min-h-screen text-white'>
